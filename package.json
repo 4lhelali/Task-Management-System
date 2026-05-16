@@ -1,0 +1,22 @@
+{
+  "name": "taskflow",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "artifacts/*",
+    "lib/*",
+    "scripts"
+  ],
+  "scripts": {
+    "dev": "concurrently -n API,WEB -c blue,green \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:api": "npm --workspace=artifacts/api-server run dev",
+    "dev:web": "npm --workspace=artifacts/taskflow run dev",
+    "db:push": "npm --workspace=lib/db run push",
+    "build": "npm --workspaces --if-present run build",
+    "typecheck": "npm --workspaces --if-present run typecheck"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "~5.9.2"
+  }
+}
