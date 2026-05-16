@@ -12,5 +12,9 @@
     {
       "path": "./lib/api-zod"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  }
 }
