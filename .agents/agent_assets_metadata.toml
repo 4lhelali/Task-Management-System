@@ -1,8 +1,0 @@
-uploads = []
-generated = []
-
-[[outputs]]
-id = "lH9J60eCXRQkvPmxQGV1_"
-uri = "file://taskflow-project.tar.gz"
-type = "unspecified"
-title = "TaskFlow — npm-ready Archive (dotenv fix)"
